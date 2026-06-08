@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Vibe Journal is a modern blog for thoughtful writing about design, culture, travel, and creative work."
+    >
+    <title>Vibe Journal | Stories for curious minds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Primary navigation">
+        <a class="logo" href="#" aria-label="Vibe Journal home">
+          <span class="logo-mark">V</span>
+          <span>Vibe Journal</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-links" id="site-menu">
+          <a href="#latest">Latest</a>
+          <a href="#topics">Topics</a>
+          <a href="#newsletter">Newsletter</a>
+          <a class="button button-small" href="#featured">Start reading</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Independent digital magazine</p>
+            <h1>Ideas, field notes, and stories for a more creative everyday.</h1>
+            <p class="hero-lede">
+              Explore practical essays on design, mindful work, travel, food,
+              and the small rituals that make life feel more intentional.
+            </p>
+            <div class="hero-actions">
+              <a class="button" href="#latest">Browse posts</a>
+              <a class="button button-ghost" href="#newsletter">Join the list</a>
+            </div>
+          </div>
+          <article class="featured-card" id="featured">
+            <div class="featured-image" aria-hidden="true">
+              <span>Feature</span>
+            </div>
+            <div class="featured-content">
+              <p class="post-meta">Design <span>&middot;</span> 8 min read</p>
+              <h2>How to build a creative routine that survives a busy week</h2>
+              <p>
+                A simple framework for protecting focus, finding inspiration,
+                and finishing meaningful work when your schedule refuses to cooperate.
+              </p>
+              <a class="text-link" href="#latest">Read the story</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section stats-band" aria-label="Publication highlights">
+        <div class="container stats-grid">
+          <div>
+            <strong>120+</strong>
+            <span>original essays</span>
+          </div>
+          <div>
+            <strong>42k</strong>
+            <span>monthly readers</span>
+          </div>
+          <div>
+            <strong>5</strong>
+            <span>weekly categories</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="topics">
+        <div class="container section-heading">
+          <p class="eyebrow">Topics</p>
+          <h2>Follow your curiosity</h2>
+          <p>Choose a lane or wander through the whole archive.</p>
+        </div>
+        <div class="container topic-grid" aria-label="Featured topics">
+          <a class="topic-card" href="#latest" data-topic-link="design">
+            <span>01</span>
+            <h3>Design</h3>
+            <p>Systems, craft, and better digital experiences.</p>
+          </a>
+          <a class="topic-card" href="#latest" data-topic-link="travel">
+            <span>02</span>
+            <h3>Travel</h3>
+            <p>Slow itineraries and city guides with a local feel.</p>
+          </a>
+          <a class="topic-card" href="#latest" data-topic-link="culture">
+            <span>03</span>
+            <h3>Culture</h3>
+            <p>Books, films, food, and the conversations around them.</p>
+          </a>
+          <a class="topic-card" href="#latest" data-topic-link="work">
+            <span>04</span>
+            <h3>Work</h3>
+            <p>Creative productivity without the burnout mythology.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="section latest-section" id="latest">
+        <div class="container latest-header">
+          <div class="section-heading align-left">
+            <p class="eyebrow">Latest writing</p>
+            <h2>Fresh from the journal</h2>
+          </div>
+          <form class="filters" role="search">
+            <label class="sr-only" for="post-search">Search posts</label>
+            <input id="post-search" type="search" placeholder="Search articles">
+            <label class="sr-only" for="category-filter">Filter by category</label>
+            <select id="category-filter">
+              <option value="all">All categories</option>
+              <option value="design">Design</option>
+              <option value="travel">Travel</option>
+              <option value="culture">Culture</option>
+              <option value="work">Work</option>
+            </select>
+          </form>
+        </div>
+
+        <div class="container post-grid" id="post-grid" aria-live="polite">
+          <article class="post-card" data-category="design" data-title="Designing calm dashboards">
+            <div class="post-image gradient-one" aria-hidden="true"></div>
+            <div class="post-content">
+              <p class="post-meta">Design <span>&middot;</span> Jun 4</p>
+              <h3>Designing calm dashboards for noisy teams</h3>
+              <p>What high-signal interfaces can teach us about attention, trust, and decision making.</p>
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="travel" data-title="A weekend in Lisbon">
+            <div class="post-image gradient-two" aria-hidden="true"></div>
+            <div class="post-content">
+              <p class="post-meta">Travel <span>&middot;</span> May 28</p>
+              <h3>A weekend in Lisbon, one tram stop at a time</h3>
+              <p>A relaxed route through tiled streets, neighborhood bakeries, and sunset viewpoints.</p>
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="culture" data-title="The dinner party playlist">
+            <div class="post-image gradient-three" aria-hidden="true"></div>
+            <div class="post-content">
+              <p class="post-meta">Culture <span>&middot;</span> May 21</p>
+              <h3>The dinner party playlist is a form of hosting</h3>
+              <p>How sound shapes conversation, memory, and the mood of a shared table.</p>
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="work" data-title="Make a better Monday">
+            <div class="post-image gradient-four" aria-hidden="true"></div>
+            <div class="post-content">
+              <p class="post-meta">Work <span>&middot;</span> May 16</p>
+              <h3>Make a better Monday with a 20-minute reset</h3>
+              <p>A tiny ritual for reviewing priorities, clearing friction, and starting with momentum.</p>
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="design" data-title="Color palettes from nature">
+            <div class="post-image gradient-five" aria-hidden="true"></div>
+            <div class="post-content">
+              <p class="post-meta">Design <span>&middot;</span> May 9</p>
+              <h3>Color palettes borrowed from spring markets</h3>
+              <p>Building expressive visual systems from citrus, flowers, painted signs, and morning light.</p>
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+
+          <article class="post-card" data-category="culture" data-title="Reading slowly">
+            <div class="post-image gradient-six" aria-hidden="true"></div>
+            <div class="post-content">
+              <p class="post-meta">Culture <span>&middot;</span> Apr 30</p>
+              <h3>Reading slowly in a very fast internet</h3>
+              <p>Notes on attention, marginalia, and reclaiming books as an unrushed practice.</p>
+              <a class="text-link" href="#">Read article</a>
+            </div>
+          </article>
+        </div>
+
+        <p class="container empty-state" id="empty-state" hidden>No posts match your search yet.</p>
+      </section>
+
+      <section class="section newsletter" id="newsletter">
+        <div class="container newsletter-card">
+          <div>
+            <p class="eyebrow">Weekly dispatch</p>
+            <h2>Get the best stories in your inbox.</h2>
+            <p>
+              One thoughtful email every Friday with essays, links, and creative prompts.
+              No spam, just the good stuff.
+            </p>
+          </div>
+          <form class="newsletter-form">
+            <label class="sr-only" for="email">Email address</label>
+            <input id="email" type="email" placeholder="you@example.com" required>
+            <button class="button" type="submit">Subscribe</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a class="logo" href="#" aria-label="Vibe Journal home">
+            <span class="logo-mark">V</span>
+            <span>Vibe Journal</span>
+          </a>
+          <p>Independent writing for curious, creative people.</p>
+        </div>
+        <div class="footer-links" aria-label="Footer links">
+          <a href="#latest">Latest</a>
+          <a href="#topics">Topics</a>
+          <a href="#newsletter">Newsletter</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
