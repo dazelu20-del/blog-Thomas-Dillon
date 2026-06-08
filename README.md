@@ -5,7 +5,9 @@ searchable article previews, and a newsletter signup interaction.
 
 ## Open the site
 
-[Open the blog website](./index.html)
+[Open the blog website](https://dazelu20-del.github.io/vibe/)
+
+The link will be live after the GitHub Pages workflow runs from `main`.
 
 ## Files
 
@@ -15,7 +17,7 @@ searchable article previews, and a newsletter signup interaction.
 
 ## Run locally
 
-Open `index.html` directly in a browser, or serve the folder with any static server:
+Serve the folder with any static server:
 
 ```bash
 python3 -m http.server 8000
