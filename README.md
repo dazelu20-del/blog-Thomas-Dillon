@@ -3,6 +3,10 @@
 A responsive static blog website with a polished editorial homepage, topic cards,
 searchable article previews, and a newsletter signup interaction.
 
+## Open the site
+
+[Open the blog website](./index.html)
+
 ## Files
 
 - `index.html` - Page structure and sample blog content.
