@@ -1,0 +1,36 @@
+---
+description: HTML, CSS, and JavaScript conventions for the static site
+globs: index.html,styles.css,script.js,**/*.html,**/*.css,**/*.js
+alwaysApply: false
+---
+
+# Static site guidelines
+
+When editing frontend files in this project:
+
+## HTML
+
+- Use semantic elements (`header`, `nav`, `main`, `article`, `section`, `footer`)
+- Include `lang` on `<html>`, viewport meta, and descriptive `<title>` / meta description
+- Add `aria-label` or `aria-labelledby` on navigation and interactive regions
+- Keep sample blog content in `index.html` unless splitting into separate pages is requested
+
+## CSS
+
+- Use CSS custom properties for colors, spacing, and typography tokens
+- Mobile-first responsive layout; test at narrow and wide breakpoints
+- Fonts: Inter (body/UI), Playfair Display (headings/editorial accents)
+- Prefer class-based styling; avoid inline styles
+
+## JavaScript
+
+- Use vanilla JS only — no frameworks or bundlers
+- Wire up mobile nav toggle, post/topic filtering, and newsletter form in `script.js`
+- Use `addEventListener`; avoid inline `onclick` handlers
+- Guard DOM queries and handle missing elements gracefully
+
+## Do not
+
+- Introduce React, Vue, or other SPA frameworks without explicit approval
+- Add heavy dependencies or a build pipeline for simple UI changes
+- Break GitHub Pages deployment (paths must work as static files from repo root)

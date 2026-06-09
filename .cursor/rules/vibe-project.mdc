@@ -1,0 +1,28 @@
+---
+description: Core context for the Vibe Journal static blog project
+alwaysApply: true
+---
+
+# Vibe Journal
+
+This repository is **Vibe Journal** — a responsive static blog website with an editorial homepage, topic cards, searchable article previews, and a newsletter signup.
+
+## Stack
+
+- Plain HTML, CSS, and JavaScript — no build step or framework
+- Deployed via GitHub Pages from `main`
+- Local dev: `python3 -m http.server 8000`
+
+## Key files
+
+- `index.html` — page structure and sample blog content
+- `styles.css` — responsive layout and visual design
+- `script.js` — mobile navigation, post filtering, newsletter form behavior
+- `.github/workflows/pages.yml` — GitHub Pages deployment
+
+## Conventions
+
+- Keep the site static; avoid adding npm/build tooling unless explicitly requested
+- Preserve accessibility: semantic HTML, ARIA labels, keyboard-friendly navigation
+- Match the existing editorial tone and design language (Inter + Playfair Display)
+- Test changes locally with a static server before committing
