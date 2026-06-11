@@ -1,0 +1,13 @@
+{
+  "name": "vibe-blog",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-dist.js",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name=vibe-blog --branch main",
+    "deploy:worker": "npm run build && wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
