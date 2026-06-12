@@ -50,43 +50,20 @@ body {
 
 /* Header */
 .site-header {
-  background: var(--color-surface);
-  border-bottom: 1px solid var(--color-border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background: #3b2a1a;
+  line-height: 0;
 }
 
-.site-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 64px;
+.banner-link {
+  display: block;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
-.logo {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.nav-link {
-  color: var(--color-text-muted);
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: var(--color-accent);
+.site-banner {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* Hero */
@@ -297,7 +274,4 @@ nav {
     grid-template-columns: 1fr;
   }
 
-  nav {
-    gap: 1rem;
-  }
 }

@@ -4,7 +4,7 @@ const path = require("path");
 const root = path.join(__dirname, "..");
 const dist = path.join(root, "dist");
 
-const copyPaths = ["index.html", "post.html", "css", "js"];
+const copyPaths = ["index.html", "post.html", "css", "js", "images"];
 
 if (fs.existsSync(dist)) {
   fs.rmSync(dist, { recursive: true, force: true });
