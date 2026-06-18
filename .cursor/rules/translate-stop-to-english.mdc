@@ -1,0 +1,14 @@
+---
+description: Translate to English when the user says stop
+globs:
+alwaysApply: true
+---
+
+# Translate to English on "stop"
+
+When the user sends a message that consists only of `stop` (case-insensitive, ignoring surrounding whitespace and punctuation), treat it as a request to translate the most recent non-English text or draft in the active context into English.
+
+- Do not interpret `stop` as a request to halt the conversation when there is translatable text available.
+- Return only the English translation unless the user asks for explanation or alternatives.
+- Preserve meaning, tone, formatting, names, links, and code blocks.
+- If there is no clear text to translate, ask which text should be translated to English.
