@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://wpn_rifle"]
+
+[ext_resource type="Script" path="res://scripts/weapon.gd" id="1_weapon"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gun"]
+size = Vector3(0.06, 0.1, 1.1)
+
+[sub_resource type="StandardMaterial3D" id="Mat_gun"]
+albedo_color = Color(0.3, 0.3, 0.35, 1)
+
+[node name="Rifle" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, -0.25, -0.5)
+script = ExtResource("1_weapon")
+weapon_name = "Rifle"
+pellet_count = 1
+spread_degrees = 1.0
+damage_per_pellet = 35
+fire_rate = 0.15
+max_ammo = 30
+reload_time = 2.0
+
+[node name="GunMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_gun")
+surface_material_override/0 = SubResource("Mat_gun")
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.65)

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://wpn_shotgun"]
+
+[ext_resource type="Script" path="res://scripts/weapon.gd" id="1_weapon"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_gun"]
+size = Vector3(0.08, 0.08, 0.9)
+
+[sub_resource type="StandardMaterial3D" id="Mat_gun"]
+albedo_color = Color(0.2, 0.2, 0.2, 1)
+
+[node name="Shotgun" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, -0.25, -0.5)
+script = ExtResource("1_weapon")
+weapon_name = "Shotgun"
+pellet_count = 8
+spread_degrees = 6.0
+damage_per_pellet = 15
+fire_rate = 0.8
+max_ammo = 8
+reload_time = 1.5
+
+[node name="GunMesh" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_gun")
+surface_material_override/0 = SubResource("Mat_gun")
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.55)

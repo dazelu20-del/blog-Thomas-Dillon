@@ -1,0 +1,87 @@
+[gd_scene load_steps=10 format=3 uid="uid://bzombie001"]
+
+[ext_resource type="Script" path="res://scripts/zombie.gd" id="1_zombie"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_body"]
+size = Vector3(0.5, 1.8, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_head"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_body"]
+size = Vector3(0.5, 0.75, 0.25)
+
+[sub_resource type="BoxMesh" id="BoxMesh_limb"]
+size = Vector3(0.25, 0.75, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="Mat_skin"]
+albedo_color = Color(0.345, 0.549, 0.345, 1)
+roughness = 1.0
+specular_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="Mat_shirt"]
+albedo_color = Color(0, 0.667, 0.667, 1)
+roughness = 1.0
+specular_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="Mat_pants"]
+albedo_color = Color(0.22, 0.176, 0.451, 1)
+roughness = 1.0
+specular_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="Mat_eyes"]
+albedo_color = Color(0.05, 0.05, 0.05, 1)
+roughness = 1.0
+specular_mode = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_eye"]
+size = Vector3(0.08, 0.08, 0.02)
+
+[node name="Zombie" type="CharacterBody3D"]
+script = ExtResource("1_zombie")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9, 0)
+shape = SubResource("BoxShape3D_body")
+
+[node name="Model" type="Node3D" parent="."]
+
+[node name="Head" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.625, 0)
+mesh = SubResource("BoxMesh_head")
+surface_material_override/0 = SubResource("Mat_skin")
+
+[node name="LeftEye" type="MeshInstance3D" parent="Model/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12, 0.05, 0.26)
+mesh = SubResource("BoxMesh_eye")
+surface_material_override/0 = SubResource("Mat_eyes")
+
+[node name="RightEye" type="MeshInstance3D" parent="Model/Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.12, 0.05, 0.26)
+mesh = SubResource("BoxMesh_eye")
+surface_material_override/0 = SubResource("Mat_eyes")
+
+[node name="Body" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.125, 0)
+mesh = SubResource("BoxMesh_body")
+surface_material_override/0 = SubResource("Mat_shirt")
+
+[node name="LeftArm" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, -0.375, 1.125, -0.375)
+mesh = SubResource("BoxMesh_limb")
+surface_material_override/0 = SubResource("Mat_skin")
+
+[node name="RightArm" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 0, 1, 0, -1, 0, 0.375, 1.125, -0.375)
+mesh = SubResource("BoxMesh_limb")
+surface_material_override/0 = SubResource("Mat_skin")
+
+[node name="LeftLeg" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0.375, 0)
+mesh = SubResource("BoxMesh_limb")
+surface_material_override/0 = SubResource("Mat_pants")
+
+[node name="RightLeg" type="MeshInstance3D" parent="Model"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.375, 0)
+mesh = SubResource("BoxMesh_limb")
+surface_material_override/0 = SubResource("Mat_pants")
